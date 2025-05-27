@@ -1,0 +1,80 @@
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Toot and Otto | Board Game</title>
+  </head>
+  <body>
+    <header>
+      <h1>Toot and Otto | Board Game</h1>
+      <div class="header-container">
+        <p>
+          Lai pirmais spēlētājs (sarkanais) uzvarētu, viņam jāizveido vārds TOOT, bet otrajam spēlētājam (dzeltenajam) jāizveido vārds OTTO. Katram spēlētājam savā rūtiņā redzams atlikušo burtu skaits. <br />
+          <br />
+          Izmantojiet peles riteni vai pārvietojiet pirkstu pa galvenes virsrakstu, lai pārslēgtos starp burtiem T un O, un klikšķiniet, lai izdarītu gājienu! <br />
+          <br />
+          Ja izvēlējāties spēlēt pret datoru, vai alfabeta algoritmu, tas aizstās otro spēlētāju.
+        </p>
+        <img src="./head.webp" alt="Board Game" />
+      </div>
+    </header>
+    <div class="setup-menu">
+      <div class="opponent-select">
+        <h3>Izvēlies pretinieku:</h3>
+        <button id="vsHuman">Spēlēt pret cilvēku</button>
+        <button id="vsAlphaBeta">Spēlēt pret Alfa-Beta</button>
+        <button id="vsHybrid">Spēlēt pret Hibrīdu</button>
+        <button id="trainHybrid">Apmācīt Hibrīdu</button>
+        <button id="vsHybridVsAlphaBeta">Hibrīds vs AlfaBeta</button>
+        <button id="vsHybridVsRandom">Hibrīds vs Random</button>
+
+      </div>
+      <div class="starter-select hidden">
+        <h3>Kurš sāks?</h3>
+        <button id="startPlayer1">Spēlētājs 1 (TOOT)</button>
+        <button id="startPlayer2">Spēlētājs 2 (OTTO)</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="player">
+        <h3>Speletajs 1 <br />(TOOT)</h3>
+        Atlikusie O: <span>6</span> <br />
+        Atlikusie T: <span>6</span>
+      </div>
+      <table class="box">
+        <thead>
+          <tr>
+            <th class="col-1"></th>
+            <th class="col-2"></th>
+            <th class="col-3"></th>
+            <th class="col-4"></th>
+            <th class="col-5"></th>
+            <th class="col-6"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <div class="player">
+        <h3>Speletajs 2 <br />(OTTO)</h3>
+        Atlikusie O: <span>6</span> <br />
+        Atlikusie T: <span>6</span>
+      </div>
+    </div>
+    <div class="winner"></div>
+    <button type="reset" id="reset">Reset</button>
+
+    <script type="text/javascript" src="./players.js"></script>
+    <script type="text/javascript" src="./playing.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
